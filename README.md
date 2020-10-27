@@ -14,7 +14,7 @@ Place them in a file named `key.yaml` in the root of this repository, in the fol
 
     telegram:
         name: botname
-        key: apikey
+        token: apikey
 
 Make sure to keep this file a secret. Do not commit it to public version control. (At some point, this
 will probably become a parameter passed to the bot on startup, and default to somewhere innocuous like

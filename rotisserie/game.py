@@ -9,11 +9,12 @@ if __name__ == "__main__":
     mycube.import_cube('cqz')
 
     # Example: get Liliana's CMC
-    print("LOTV's CMC is: {}".format(
-        mycube.get_cards()['Liliana of the Veil'].cmc))
+    # print("LOTV's CMC is: {}".format(
+    #   mycube.get_cards()['Liliana of the Veil'].cmc))
 
     # Set up our bot
     telegram = Bot(secretfile='/Users/smatthews/rotisserie/key.yaml')
-
-    # and see if it can be interacted with?
-    telegram.check_for_updates()
+    if telegram:
+        telegram.start_polling()
+    else:
+        print("Couldn't start bot, quitting")
