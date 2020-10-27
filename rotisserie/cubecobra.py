@@ -1,7 +1,5 @@
 import requests
 
-from card import Card
-
 # Get a cube list from Cube Cobra.
 class Cubecobra:
     def __init__(self):
