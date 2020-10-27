@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "/usr/local/Cellar/python@3.8/3.8.6/Frameworks/Python.framework/Versions/3.8/bin/python3.8"
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.autoComplete.extraPaths": [
+        "/Users/smatthews/Library/Python/3.8/lib/python/site-packages"
+    ]
 }

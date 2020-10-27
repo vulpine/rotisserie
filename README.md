@@ -2,8 +2,7 @@
 
 This is the provisional early code for a bot to handle _Magic: the Gathering_ rotisserie drafts.
 
-It's incredibly threadbare right now and is mostly an excuse for me to write dodgy Python. All code is
-subject to change, and nothing can be realistically expected to work.
+It's incredibly threadbare right now and is mostly an excuse for me to write dodgy Python. All code is subject to change, and nothing can be realistically expected to work.
 
 
 # Requirements

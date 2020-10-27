@@ -1,21 +1,24 @@
 import json
 import scryfall
 
+
 class Card:
+    """
+    Stores details for a specific card in a cube.
+
+    On instantiation, we provide just the card name, to avoid calling Scryfall repeatedly and
+    taking a long time. When we first request any of the properties, we then call the Scryfall
+    API, and set all of them.
+    """
+
     def __init__(self, cardname):
         self.cardname = cardname
         self._cardtypes = None
         self._subtypes = None
         self._manacost = None
         self._cmc = None
-        self.drafted_by = None         # Which player has drafted this card?
+        self.drafted_by = None         # TODO: Which player has drafted this card?
 
-
-    """
-    For each of the properties, if any one is unset, we call fetch_details() to set all of them
-    to avoid unnecessary future calls to Scryfall.
-    For example, if cmc is None, we set it, as well as mana cost, card types, etc.
-    """
     @property
     def cmc(self):
         if self._cmc == None:
@@ -57,4 +60,5 @@ class Card:
         self._manacost = value
 
     def fetch_details(self):
-        self.cardtypes, self.subtypes, self.manacost, self.cmc = scryfall.import_card(self.cardname)
+        self.cardtypes, self.subtypes, self.manacost, self.cmc = scryfall.import_card(
+            self.cardname)
