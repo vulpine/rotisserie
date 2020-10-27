@@ -1,10 +1,8 @@
-from cubecobra import Cubecobra
+import cubecobra
 from card import Card
 
 
 if __name__ == "__main__":
-    cubecobra = Cubecobra()
-
     cube_id = 'cqz' # This isn't a secret. Feel free to look at my cube. It's rad.
     card_names = cubecobra.get_list(cube_id)
     imported_cube = {}

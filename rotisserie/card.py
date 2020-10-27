@@ -1,5 +1,5 @@
 import json
-from scryfall import Scryfall
+import scryfall
 
 class Card:
     def __init__(self, cardname):
@@ -57,4 +57,4 @@ class Card:
         self._manacost = value
 
     def fetch_details(self):
-        self.cardtypes, self.subtypes, self.manacost, self.cmc = Scryfall.import_card(self.cardname)
+        self.cardtypes, self.subtypes, self.manacost, self.cmc = scryfall.import_card(self.cardname)
